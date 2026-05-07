@@ -20,16 +20,15 @@ export function Nav() {
           <span className="font-display text-xl tracking-tight">Verdant<span className="text-lemon">.</span></span>
         </Link>
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
-          <a href="#capital" className="hover:text-foreground transition">Capital</a>
-          <a href="#forex" className="hover:text-foreground transition">Forex</a>
-          <a href="#fixed" className="hover:text-foreground transition">Fixed Income</a>
-          <a href="#insights" className="hover:text-foreground transition">Insights</a>
+          <Link to="/" activeOptions={{ exact: true }} activeProps={{ className: "text-foreground" }} className="hover:text-foreground transition">Home</Link>
+          <Link to="/about" activeProps={{ className: "text-foreground" }} className="hover:text-foreground transition">About</Link>
+          <Link to="/calculator" activeProps={{ className: "text-foreground" }} className="hover:text-foreground transition">Calculator</Link>
+          <Link to="/contact" activeProps={{ className: "text-foreground" }} className="hover:text-foreground transition">Contact</Link>
         </nav>
         <div className="flex items-center gap-2">
-          <a href="#" className="hidden sm:inline-flex text-sm text-muted-foreground hover:text-foreground px-3 py-2">Sign in</a>
-          <a href="#cta" className="inline-flex items-center gap-1 rounded-full bg-primary text-primary-foreground text-sm font-medium px-4 py-2 hover:opacity-90 transition">
-            Open account →
-          </a>
+          <Link to="/contact" className="inline-flex items-center gap-1 rounded-full bg-primary text-primary-foreground text-sm font-medium px-4 py-2 hover:opacity-90 transition">
+            Get in touch →
+          </Link>
         </div>
       </div>
     </header>
