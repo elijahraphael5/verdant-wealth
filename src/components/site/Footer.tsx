@@ -1,3 +1,26 @@
+import { Link } from "@tanstack/react-router";
+
+const columns = [
+  { t: "Products", l: [
+    { label: "Capital", to: "/capital" },
+    { label: "Forex", to: "/forex" },
+    { label: "Fixed Income", to: "/fixed-income" },
+    { label: "Pricing", to: "/pricing" },
+  ] },
+  { t: "Company", l: [
+    { label: "About", to: "/about" },
+    { label: "Insights", to: "/insights" },
+    { label: "Careers", to: "/careers" },
+    { label: "Press", to: "/press" },
+  ] },
+  { t: "Legal", l: [
+    { label: "Disclosures", to: "/disclosures" },
+    { label: "Terms", to: "/terms" },
+    { label: "Privacy", to: "/privacy" },
+    { label: "Compliance", to: "/compliance" },
+  ] },
+] as const;
+
 export function Footer() {
   return (
     <footer className="border-t border-border py-16">
@@ -14,15 +37,15 @@ export function Footer() {
               Modern investment infrastructure for capital, FX, and fixed income. Built by operators, regulated globally.
             </p>
           </div>
-          {[
-            { t: "Products", l: ["Capital", "Forex", "Fixed Income", "Pricing"] },
-            { t: "Company", l: ["About", "Insights", "Careers", "Press"] },
-            { t: "Legal", l: ["Disclosures", "Terms", "Privacy", "Compliance"] },
-          ].map((c) => (
+          {columns.map((c) => (
             <div key={c.t}>
               <div className="text-sm font-medium">{c.t}</div>
               <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-                {c.l.map((i) => <li key={i}><a href="#" className="hover:text-foreground transition">{i}</a></li>)}
+                {c.l.map((i) => (
+                  <li key={i.label}>
+                    <Link to={i.to} className="hover:text-foreground transition">{i.label}</Link>
+                  </li>
+                ))}
               </ul>
             </div>
           ))}

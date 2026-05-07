@@ -9,14 +9,80 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as PricingRouteImport } from './routes/pricing'
+import { Route as PressRouteImport } from './routes/press'
+import { Route as InsightsRouteImport } from './routes/insights'
+import { Route as ForexRouteImport } from './routes/forex'
+import { Route as FixedIncomeRouteImport } from './routes/fixed-income'
+import { Route as DisclosuresRouteImport } from './routes/disclosures'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ComplianceRouteImport } from './routes/compliance'
+import { Route as CareersRouteImport } from './routes/careers'
+import { Route as CapitalRouteImport } from './routes/capital'
 import { Route as CalculatorRouteImport } from './routes/calculator'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PricingRoute = PricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PressRoute = PressRouteImport.update({
+  id: '/press',
+  path: '/press',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InsightsRoute = InsightsRouteImport.update({
+  id: '/insights',
+  path: '/insights',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ForexRoute = ForexRouteImport.update({
+  id: '/forex',
+  path: '/forex',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FixedIncomeRoute = FixedIncomeRouteImport.update({
+  id: '/fixed-income',
+  path: '/fixed-income',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DisclosuresRoute = DisclosuresRouteImport.update({
+  id: '/disclosures',
+  path: '/disclosures',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ComplianceRoute = ComplianceRouteImport.update({
+  id: '/compliance',
+  path: '/compliance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CareersRoute = CareersRouteImport.update({
+  id: '/careers',
+  path: '/careers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CapitalRoute = CapitalRouteImport.update({
+  id: '/capital',
+  path: '/capital',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CalculatorRoute = CalculatorRouteImport.update({
@@ -39,43 +105,210 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/calculator': typeof CalculatorRoute
+  '/capital': typeof CapitalRoute
+  '/careers': typeof CareersRoute
+  '/compliance': typeof ComplianceRoute
   '/contact': typeof ContactRoute
+  '/disclosures': typeof DisclosuresRoute
+  '/fixed-income': typeof FixedIncomeRoute
+  '/forex': typeof ForexRoute
+  '/insights': typeof InsightsRoute
+  '/press': typeof PressRoute
+  '/pricing': typeof PricingRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/calculator': typeof CalculatorRoute
+  '/capital': typeof CapitalRoute
+  '/careers': typeof CareersRoute
+  '/compliance': typeof ComplianceRoute
   '/contact': typeof ContactRoute
+  '/disclosures': typeof DisclosuresRoute
+  '/fixed-income': typeof FixedIncomeRoute
+  '/forex': typeof ForexRoute
+  '/insights': typeof InsightsRoute
+  '/press': typeof PressRoute
+  '/pricing': typeof PricingRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/calculator': typeof CalculatorRoute
+  '/capital': typeof CapitalRoute
+  '/careers': typeof CareersRoute
+  '/compliance': typeof ComplianceRoute
   '/contact': typeof ContactRoute
+  '/disclosures': typeof DisclosuresRoute
+  '/fixed-income': typeof FixedIncomeRoute
+  '/forex': typeof ForexRoute
+  '/insights': typeof InsightsRoute
+  '/press': typeof PressRoute
+  '/pricing': typeof PricingRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/calculator' | '/contact'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/calculator'
+    | '/capital'
+    | '/careers'
+    | '/compliance'
+    | '/contact'
+    | '/disclosures'
+    | '/fixed-income'
+    | '/forex'
+    | '/insights'
+    | '/press'
+    | '/pricing'
+    | '/privacy'
+    | '/terms'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/calculator' | '/contact'
-  id: '__root__' | '/' | '/about' | '/calculator' | '/contact'
+  to:
+    | '/'
+    | '/about'
+    | '/calculator'
+    | '/capital'
+    | '/careers'
+    | '/compliance'
+    | '/contact'
+    | '/disclosures'
+    | '/fixed-income'
+    | '/forex'
+    | '/insights'
+    | '/press'
+    | '/pricing'
+    | '/privacy'
+    | '/terms'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/calculator'
+    | '/capital'
+    | '/careers'
+    | '/compliance'
+    | '/contact'
+    | '/disclosures'
+    | '/fixed-income'
+    | '/forex'
+    | '/insights'
+    | '/press'
+    | '/pricing'
+    | '/privacy'
+    | '/terms'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   CalculatorRoute: typeof CalculatorRoute
+  CapitalRoute: typeof CapitalRoute
+  CareersRoute: typeof CareersRoute
+  ComplianceRoute: typeof ComplianceRoute
   ContactRoute: typeof ContactRoute
+  DisclosuresRoute: typeof DisclosuresRoute
+  FixedIncomeRoute: typeof FixedIncomeRoute
+  ForexRoute: typeof ForexRoute
+  InsightsRoute: typeof InsightsRoute
+  PressRoute: typeof PressRoute
+  PricingRoute: typeof PricingRoute
+  PrivacyRoute: typeof PrivacyRoute
+  TermsRoute: typeof TermsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pricing': {
+      id: '/pricing'
+      path: '/pricing'
+      fullPath: '/pricing'
+      preLoaderRoute: typeof PricingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/press': {
+      id: '/press'
+      path: '/press'
+      fullPath: '/press'
+      preLoaderRoute: typeof PressRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insights': {
+      id: '/insights'
+      path: '/insights'
+      fullPath: '/insights'
+      preLoaderRoute: typeof InsightsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/forex': {
+      id: '/forex'
+      path: '/forex'
+      fullPath: '/forex'
+      preLoaderRoute: typeof ForexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fixed-income': {
+      id: '/fixed-income'
+      path: '/fixed-income'
+      fullPath: '/fixed-income'
+      preLoaderRoute: typeof FixedIncomeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/disclosures': {
+      id: '/disclosures'
+      path: '/disclosures'
+      fullPath: '/disclosures'
+      preLoaderRoute: typeof DisclosuresRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/compliance': {
+      id: '/compliance'
+      path: '/compliance'
+      fullPath: '/compliance'
+      preLoaderRoute: typeof ComplianceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/careers': {
+      id: '/careers'
+      path: '/careers'
+      fullPath: '/careers'
+      preLoaderRoute: typeof CareersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/capital': {
+      id: '/capital'
+      path: '/capital'
+      fullPath: '/capital'
+      preLoaderRoute: typeof CapitalRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/calculator': {
@@ -106,7 +339,18 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   CalculatorRoute: CalculatorRoute,
+  CapitalRoute: CapitalRoute,
+  CareersRoute: CareersRoute,
+  ComplianceRoute: ComplianceRoute,
   ContactRoute: ContactRoute,
+  DisclosuresRoute: DisclosuresRoute,
+  FixedIncomeRoute: FixedIncomeRoute,
+  ForexRoute: ForexRoute,
+  InsightsRoute: InsightsRoute,
+  PressRoute: PressRoute,
+  PricingRoute: PricingRoute,
+  PrivacyRoute: PrivacyRoute,
+  TermsRoute: TermsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
