@@ -10,13 +10,13 @@ export function CTA() {
               Your capital deserves <span className="italic">better infrastructure.</span>
             </h2>
             <p className="mt-5 max-w-xl mx-auto text-[oklch(0.18_0.05_155)/0.8]">
-              Open an account in under 4 minutes. No minimums to start. Institutional pricing once you scale.
+              Talk to our advisors or model your returns with our investment calculator.
             </p>
             <div className="mt-8 flex flex-wrap gap-3 justify-center">
-              <a href="#" className="rounded-full bg-[oklch(0.18_0.05_155)] text-foreground px-6 py-3 font-medium hover:opacity-90 transition">
-                Open an account →
+              <a href="/calculator" className="rounded-full bg-[oklch(0.18_0.05_155)] text-foreground px-6 py-3 font-medium hover:opacity-90 transition">
+                Try the calculator →
               </a>
-              <a href="#" className="rounded-full border border-[oklch(0.18_0.05_155)/0.3] text-[oklch(0.18_0.05_155)] px-6 py-3 font-medium hover:bg-[oklch(0.18_0.05_155)/0.08] transition">
+              <a href="/contact" className="rounded-full border border-[oklch(0.18_0.05_155)/0.3] text-[oklch(0.18_0.05_155)] px-6 py-3 font-medium hover:bg-[oklch(0.18_0.05_155)/0.08] transition">
                 Talk to an advisor
               </a>
             </div>
