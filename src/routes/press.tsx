@@ -2,19 +2,19 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageShell } from "@/components/site/PageShell";
 
 const press = [
-  { src: "Bloomberg", date: "Apr 2026", title: "Verdant Capital surpasses $4B in client assets, expands to Frankfurt" },
-  { src: "Financial Times", date: "Mar 2026", title: "How Verdant is unbundling the family office for a new generation" },
-  { src: "Reuters", date: "Jan 2026", title: "Verdant Capital reports record 2025, posts 14.2% net return" },
-  { src: "TechCrunch", date: "Nov 2025", title: "Verdant raises $80M Series C to scale execution infrastructure" },
+  { src: "Bloomberg", date: "Apr 2026", title: "Solynvest surpasses $4B in client assets, expands to Frankfurt" },
+  { src: "Financial Times", date: "Mar 2026", title: "How Solynvest is unbundling the family office for a new generation" },
+  { src: "Reuters", date: "Jan 2026", title: "Solynvest reports record 2025, posts 14.2% net return" },
+  { src: "TechCrunch", date: "Nov 2025", title: "Solynvest raises $80M Series C to scale execution infrastructure" },
   { src: "WSJ", date: "Sep 2025", title: "Inside the rise of transparent-fee investment platforms" },
 ];
 
 export const Route = createFileRoute("/press")({
   head: () => ({
     meta: [
-      { title: "Press — Verdant Capital" },
-      { name: "description", content: "Press coverage, news releases, and media resources from Verdant Capital." },
-      { property: "og:title", content: "Press — Verdant Capital" },
+      { title: "Press — Solynvest" },
+      { name: "description", content: "Press coverage, news releases, and media resources from Solynvest." },
+      { property: "og:title", content: "Press — Solynvest" },
       { property: "og:description", content: "News & media coverage." },
     ],
   }),

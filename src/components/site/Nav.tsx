@@ -17,7 +17,7 @@ export function Nav() {
           <div className="size-7 rounded-md bg-gradient-to-br from-[oklch(0.92_0.22_125)] to-[oklch(0.7_0.2_140)] grid place-items-center">
             <svg viewBox="0 0 24 24" className="size-4 text-[oklch(0.18_0.05_155)]" fill="currentColor"><path d="M3 20 L12 4 L21 20 L12 14 Z"/></svg>
           </div>
-          <span className="font-display text-xl tracking-tight">Verdant<span className="text-lemon">.</span></span>
+          <span className="font-display text-xl tracking-tight">Solynvest<span className="text-lemon">.</span></span>
         </Link>
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
           <Link to="/" activeOptions={{ exact: true }} activeProps={{ className: "text-foreground" }} className="hover:text-foreground transition">Home</Link>

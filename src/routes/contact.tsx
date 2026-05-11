@@ -8,9 +8,9 @@ import { Toaster } from "@/components/ui/sonner";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Verdant Capital — Talk to an advisor" },
-      { name: "description", content: "Reach the Verdant Capital team. Schedule a call with an advisor or send us a message about capital allocation, FX, or fixed income strategies." },
-      { property: "og:title", content: "Contact Verdant Capital" },
+      { title: "Contact Solynvest — Talk to an advisor" },
+      { name: "description", content: "Reach the Solynvest team. Schedule a call with an advisor or send us a message about capital allocation, FX, or fixed income strategies." },
+      { property: "og:title", content: "Contact Solynvest" },
       { property: "og:description", content: "Talk to our investment advisors today." },
     ],
   }),

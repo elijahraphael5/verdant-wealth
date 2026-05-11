@@ -37,7 +37,7 @@ export function Hero() {
               <span className="hero-line block">Built for serious investors.</span>
             </h1>
             <p className="hero-sub mt-6 max-w-xl text-lg text-muted-foreground leading-relaxed">
-              Verdant Capital unifies private capital allocation, institutional-grade FX execution,
+              Solynvest unifies private capital allocation, institutional-grade FX execution,
               and laddered fixed income — under one transparent platform.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
