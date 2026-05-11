@@ -4,9 +4,9 @@ import { PageShell, FeatureGrid } from "@/components/site/PageShell";
 export const Route = createFileRoute("/forex")({
   head: () => ({
     meta: [
-      { title: "Forex Trading — Verdant Capital" },
+      { title: "Forex Trading — Solynvest" },
       { name: "description", content: "Institutional FX execution with tier-1 liquidity, sub-millisecond fills, transparent spreads, and 70+ currency pairs." },
-      { property: "og:title", content: "Forex Trading — Verdant" },
+      { property: "og:title", content: "Forex Trading — Solynvest" },
       { property: "og:description", content: "Institutional FX execution. Retail simplicity." },
     ],
   }),

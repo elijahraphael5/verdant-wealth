@@ -6,9 +6,9 @@ import { useMemo, useState } from "react";
 export const Route = createFileRoute("/calculator")({
   head: () => ({
     meta: [
-      { title: "Investment Calculator — Verdant Capital" },
-      { name: "description", content: "Project your portfolio's growth across capital, forex, and fixed income with Verdant's interactive investment calculator." },
-      { property: "og:title", content: "Investment Calculator — Verdant Capital" },
+      { title: "Investment Calculator — Solynvest" },
+      { name: "description", content: "Project your portfolio's growth across capital, forex, and fixed income with Solynvest's interactive investment calculator." },
+      { property: "og:title", content: "Investment Calculator — Solynvest" },
       { property: "og:description", content: "Model returns with monthly contributions and compounding." },
     ],
   }),

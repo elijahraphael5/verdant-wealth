@@ -4,9 +4,9 @@ import { PageShell, FeatureGrid } from "@/components/site/PageShell";
 export const Route = createFileRoute("/fixed-income")({
   head: () => ({
     meta: [
-      { title: "Fixed Income — Verdant Capital" },
+      { title: "Fixed Income — Solynvest" },
       { name: "description", content: "Investment-grade bonds, sovereign treasuries, and structured notes — laddered for liquidity and duration-matched to your horizon." },
-      { property: "og:title", content: "Fixed Income — Verdant" },
+      { property: "og:title", content: "Fixed Income — Solynvest" },
       { property: "og:description", content: "Predictable yield. Engineered ladders." },
     ],
   }),

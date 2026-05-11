@@ -13,10 +13,10 @@ const items = [
 export const Route = createFileRoute("/insights")({
   head: () => ({
     meta: [
-      { title: "Insights — Verdant Capital research desk" },
-      { name: "description", content: "Macro, FX strategy, fixed income and capital markets analysis from Verdant Capital's research desk." },
-      { property: "og:title", content: "Insights — Verdant" },
-      { property: "og:description", content: "From the Verdant Capital research desk." },
+      { title: "Insights — Solynvest research desk" },
+      { name: "description", content: "Macro, FX strategy, fixed income and capital markets analysis from Solynvest's research desk." },
+      { property: "og:title", content: "Insights — Solynvest" },
+      { property: "og:description", content: "From the Solynvest research desk." },
     ],
   }),
   component: () => (

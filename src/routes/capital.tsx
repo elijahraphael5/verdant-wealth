@@ -4,9 +4,9 @@ import { PageShell, FeatureGrid } from "@/components/site/PageShell";
 export const Route = createFileRoute("/capital")({
   head: () => ({
     meta: [
-      { title: "Capital Investment — Verdant Capital" },
+      { title: "Capital Investment — Solynvest" },
       { name: "description", content: "Diversified equity, venture, and private market exposure curated by senior portfolio managers — built to compound across decades." },
-      { property: "og:title", content: "Capital Investment — Verdant" },
+      { property: "og:title", content: "Capital Investment — Solynvest" },
       { property: "og:description", content: "Allocate capital with conviction." },
     ],
   }),

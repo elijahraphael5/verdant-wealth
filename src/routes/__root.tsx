@@ -50,9 +50,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Verdant Capital — Capital, Forex & Fixed Income Investing" },
-      { name: "description", content: "Verdant Capital helps investors grow wealth through capital investment, forex trading, and fixed income strategies — built on transparency and performance." },
-      { property: "og:title", content: "Verdant Capital — Modern Investment Platform" },
+      { title: "Solynvest — Capital, Forex & Fixed Income Investing" },
+      { name: "description", content: "Solynvest helps investors grow wealth through capital investment, forex trading, and fixed income strategies — built on transparency and performance." },
+      { property: "og:title", content: "Solynvest — Modern Investment Platform" },
       { property: "og:description", content: "Capital investment, forex trading & fixed income — engineered for serious investors." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

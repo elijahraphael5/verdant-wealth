@@ -5,9 +5,9 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Verdant Capital — Our story & philosophy" },
-      { name: "description", content: "Verdant Capital is a modern investment firm uniting capital allocation, FX execution, and fixed income strategy under one transparent platform." },
-      { property: "og:title", content: "About Verdant Capital" },
+      { title: "About Solynvest — Our story & philosophy" },
+      { name: "description", content: "Solynvest is a modern investment firm uniting capital allocation, FX execution, and fixed income strategy under one transparent platform." },
+      { property: "og:title", content: "About Solynvest" },
       { property: "og:description", content: "Built by operators. Trusted by investors. Discover our philosophy, our team, and our approach." },
     ],
   }),
@@ -33,12 +33,12 @@ function AboutPage() {
       <Nav />
       <main className="pt-32">
         <section className="mx-auto max-w-5xl px-6">
-          <div className="text-xs uppercase tracking-[0.2em] text-lemon">About Verdant</div>
+          <div className="text-xs uppercase tracking-[0.2em] text-lemon">About Solynvest</div>
           <h1 className="mt-4 text-5xl sm:text-7xl leading-[1.05]">
             We build investment <span className="italic text-gradient-lemon">infrastructure</span>, not products.
           </h1>
           <p className="mt-8 text-lg text-muted-foreground max-w-2xl leading-relaxed">
-            Verdant Capital was founded in 2019 by a team of former buy-side operators
+            Solynvest was founded in 2019 by a team of former buy-side operators
             who believed sophisticated investing was trapped behind closed doors. We
             unbundled it — capital allocation, institutional FX execution, and laddered
             fixed income — and rebuilt it on transparent, modern rails.
@@ -92,7 +92,7 @@ function AboutPage() {
             <h2 className="text-3xl sm:text-4xl">Our story.</h2>
             <div className="mt-8 space-y-5 text-muted-foreground leading-relaxed">
               <p>What started as a frustration — that institutional-grade tools were locked behind seven-figure minimums — became a thesis: investors at every scale deserve the same quality of execution, research, and access.</p>
-              <p>Today, Verdant serves family offices, RIAs, and individual investors across 27 countries. Our team has executed over $4.2B in client capital, with a single guiding principle: align our incentives with yours, every time.</p>
+              <p>Today, Solynvest serves family offices, RIAs, and individual investors across 27 countries. Our team has executed over $4.2B in client capital, with a single guiding principle: align our incentives with yours, every time.</p>
               <p>We are regulated in the United States, the United Kingdom, and the European Union, and we publish our execution quality reports quarterly.</p>
             </div>
           </div>

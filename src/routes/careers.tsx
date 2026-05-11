@@ -11,7 +11,7 @@ const roles = [
 ];
 
 const perks = [
-  { t: "Equity & profit share", d: "Every employee owns a slice of Verdant — and shares in performance." },
+  { t: "Equity & profit share", d: "Every employee owns a slice of Solynvest — and shares in performance." },
   { t: "Remote-friendly", d: "Hubs in NYC and London. Most engineering and research roles fully remote." },
   { t: "Learning stipend", d: "$5,000/yr for books, courses, conferences, and certifications." },
 ];
@@ -19,9 +19,9 @@ const perks = [
 export const Route = createFileRoute("/careers")({
   head: () => ({
     meta: [
-      { title: "Careers — Verdant Capital" },
-      { name: "description", content: "Join Verdant Capital. Open roles across investment, engineering, research, design, and compliance." },
-      { property: "og:title", content: "Careers at Verdant Capital" },
+      { title: "Careers — Solynvest" },
+      { name: "description", content: "Join Solynvest. Open roles across investment, engineering, research, design, and compliance." },
+      { property: "og:title", content: "Careers at Solynvest" },
       { property: "og:description", content: "Build the next generation of investment infrastructure." },
     ],
   }),

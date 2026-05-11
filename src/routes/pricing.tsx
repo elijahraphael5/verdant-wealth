@@ -25,9 +25,9 @@ const tiers = [
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
-      { title: "Pricing — Verdant Capital" },
-      { name: "description", content: "Transparent fees across Verdant Capital's Core, Prime, and Family Office tiers. No hidden spreads, no kickbacks." },
-      { property: "og:title", content: "Pricing — Verdant" },
+      { title: "Pricing — Solynvest" },
+      { name: "description", content: "Transparent fees across Solynvest's Core, Prime, and Family Office tiers. No hidden spreads, no kickbacks." },
+      { property: "og:title", content: "Pricing — Solynvest" },
       { property: "og:description", content: "Simple, transparent investment pricing." },
     ],
   }),
