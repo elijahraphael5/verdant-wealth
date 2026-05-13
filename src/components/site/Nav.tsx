@@ -56,7 +56,7 @@ export function Nav() {
                 key={l.to}
                 to={l.to}
                 onClick={() => setOpen(false)}
-                activeOptions={l.exact ? { exact: true } : undefined}
+                activeOptions={"exact" in l && l.exact ? { exact: true } : undefined}
                 activeProps={{ className: "text-foreground" }}
                 className="text-foreground/80"
               >
