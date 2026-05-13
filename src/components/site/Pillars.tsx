@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -7,42 +8,42 @@ gsap.registerPlugin(ScrollTrigger);
 const pillars = [
   {
     id: "capital",
-    eyebrow: "01 — Capital Investment",
-    title: "Allocate capital with conviction.",
-    body: "Diversified equity, venture, and private market exposure curated by senior portfolio managers. Built to compound across decades, not headlines.",
-    bullets: ["Multi-asset diversification", "Direct co-investment access", "Risk-adjusted target: 12–15% IRR"],
-    metric: { v: "$4.2B+", l: "Assets under allocation" },
+    eyebrow: "Capital",
+    title: "Allocate with conviction.",
+    body: "Diversified equity, venture, and private markets — curated by senior portfolio managers and built to compound across decades.",
+    to: "/capital",
+    visual: "capital",
   },
   {
     id: "forex",
-    eyebrow: "02 — Forex Trading",
-    title: "Institutional FX execution. Retail simplicity.",
-    body: "Tier-1 liquidity aggregation across 70+ currency pairs. Sub-millisecond execution, transparent spreads, and deep analytics — without the desk.",
-    bullets: ["Spreads from 0.0 pips", "Sub-ms aggregated execution", "Algorithmic & manual strategies"],
-    metric: { v: "70+", l: "Currency pairs" },
+    eyebrow: "Forex",
+    title: "Institutional execution.",
+    body: "Tier-1 liquidity across 70+ currency pairs. Sub-millisecond execution and transparent spreads — without the desk.",
+    to: "/forex",
+    visual: "forex",
   },
   {
     id: "fixed",
-    eyebrow: "03 — Fixed Income",
-    title: "Predictable yield. Engineered ladders.",
-    body: "Investment-grade bonds, sovereign treasuries, and structured notes — laddered for liquidity and duration-matched to your horizon.",
-    bullets: ["Treasuries, corporates & munis", "Auto-ladder & auto-reinvest", "Yields up to 6.4% APY"],
-    metric: { v: "6.4%", l: "Top tier APY" },
+    eyebrow: "Fixed Income",
+    title: "Predictable yield.",
+    body: "Investment-grade bonds, sovereigns, and structured notes — laddered for liquidity and matched to your horizon.",
+    to: "/fixed-income",
+    visual: "fixed",
   },
-];
+] as const;
 
 export function Pillars() {
   const root = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.utils.toArray<HTMLElement>(".pillar").forEach((el) => {
+      gsap.utils.toArray<HTMLElement>(".tile").forEach((el) => {
         gsap.from(el, {
-          y: 80,
+          y: 40,
           opacity: 0,
-          duration: 1,
+          duration: 0.9,
           ease: "power3.out",
-          scrollTrigger: { trigger: el, start: "top 85%" },
+          scrollTrigger: { trigger: el, start: "top 88%" },
         });
       });
     }, root);
@@ -50,42 +51,25 @@ export function Pillars() {
   }, []);
 
   return (
-    <section ref={root} className="relative py-32">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="max-w-2xl mb-20">
-          <div className="text-xs uppercase tracking-[0.2em] text-lemon">Three pillars</div>
-          <h2 className="mt-4 text-4xl sm:text-5xl">
-            One platform. <span className="italic text-gradient-lemon">Three engines</span> of growth.
-          </h2>
+    <section ref={root} className="py-24 sm:py-32">
+      <div className="container-x">
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <h2 className="display-lg">Three engines. One platform.</h2>
+          <p className="mt-4 text-[18px] text-muted-foreground">
+            Each strategy stands on its own. Together, they work in concert.
+          </p>
         </div>
 
-        <div className="space-y-10">
-          {pillars.map((p, i) => (
-            <article key={p.id} id={p.id} className="pillar glass rounded-3xl p-8 sm:p-12 grid lg:grid-cols-12 gap-8">
-              <div className="lg:col-span-7">
-                <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">{p.eyebrow}</div>
-                <h3 className="mt-3 text-3xl sm:text-4xl">{p.title}</h3>
-                <p className="mt-4 text-muted-foreground max-w-xl leading-relaxed">{p.body}</p>
-                <ul className="mt-6 space-y-2">
-                  {p.bullets.map((b) => (
-                    <li key={b} className="flex items-center gap-3 text-sm">
-                      <span className="size-1.5 rounded-full bg-lemon" /> {b}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="lg:col-span-5 flex flex-col justify-between gap-6">
-                <div className="rounded-2xl bg-card/60 border border-border p-6 h-full flex flex-col justify-between">
-                  <div className="text-xs text-muted-foreground">{p.metric.l}</div>
-                  <div className="font-display text-6xl text-gradient-lemon">{p.metric.v}</div>
-                  <div className="mt-4">
-                    <PillarVisual idx={i} />
-                  </div>
-                </div>
-                <a href="#cta" className="inline-flex items-center justify-between rounded-full border border-border px-5 py-3 text-sm font-medium hover:bg-card transition">
-                  Learn more <span>→</span>
-                </a>
-              </div>
+        <div className="grid md:grid-cols-3 gap-4">
+          {pillars.map((p) => (
+            <article key={p.id} className="tile surface-tile p-8 flex flex-col">
+              <PillarVisual kind={p.visual} />
+              <p className="mt-8 text-[13px] tracking-wide text-muted-foreground uppercase">{p.eyebrow}</p>
+              <h3 className="mt-2 text-[28px] font-semibold tracking-tight">{p.title}</h3>
+              <p className="mt-3 text-[15px] text-muted-foreground leading-relaxed flex-1">{p.body}</p>
+              <Link to={p.to} className="pill-link mt-6">
+                Explore <span aria-hidden>›</span>
+              </Link>
             </article>
           ))}
         </div>
@@ -94,30 +78,41 @@ export function Pillars() {
   );
 }
 
-function PillarVisual({ idx }: { idx: number }) {
-  if (idx === 0) {
+function PillarVisual({ kind }: { kind: string }) {
+  if (kind === "capital") {
     return (
-      <div className="grid grid-cols-6 gap-1 h-20 items-end">
-        {[40, 65, 50, 80, 70, 95].map((h, i) => (
-          <div key={i} className="rounded-sm" style={{ height: `${h}%`, background: i === 5 ? "oklch(0.92 0.22 125)" : "oklch(0.4 0.08 150)" }} />
-        ))}
+      <div className="aspect-[4/3] rounded-2xl bg-background border border-border/60 grid place-items-center p-6">
+        <div className="grid grid-cols-7 gap-1.5 w-full items-end h-28">
+          {[40, 55, 48, 70, 60, 82, 95].map((h, i) => (
+            <div
+              key={i}
+              className="rounded-sm"
+              style={{
+                height: `${h}%`,
+                background: i === 6 ? "var(--blue)" : "oklch(0.88 0 0)",
+              }}
+            />
+          ))}
+        </div>
       </div>
     );
   }
-  if (idx === 1) {
+  if (kind === "forex") {
     return (
-      <svg viewBox="0 0 200 80" className="w-full h-20">
-        <path d="M0 60 L 30 40 L 60 50 L 90 20 L 120 35 L 150 15 L 200 25" fill="none" stroke="oklch(0.92 0.22 125)" strokeWidth="2" />
-        <path d="M0 50 L 30 55 L 60 35 L 90 45 L 120 30 L 150 40 L 200 38" fill="none" stroke="oklch(0.5 0.1 155)" strokeWidth="2" strokeDasharray="3 3" />
-      </svg>
+      <div className="aspect-[4/3] rounded-2xl bg-background border border-border/60 p-6 flex items-center">
+        <svg viewBox="0 0 200 80" className="w-full">
+          <path d="M0 60 L 30 40 L 60 50 L 90 20 L 120 35 L 150 15 L 200 25" fill="none" stroke="var(--blue)" strokeWidth="1.75" />
+          <path d="M0 50 L 30 55 L 60 35 L 90 45 L 120 30 L 150 40 L 200 38" fill="none" stroke="oklch(0.78 0 0)" strokeWidth="1.5" strokeDasharray="3 3" />
+        </svg>
+      </div>
     );
   }
   return (
-    <div className="space-y-1.5">
-      {[80, 65, 50, 35].map((w, i) => (
-        <div key={i} className="flex items-center gap-2 text-xs">
-          <div className="h-2 rounded-full" style={{ width: `${w}%`, background: "oklch(0.92 0.22 125)" }} />
-          <span className="text-muted-foreground">{(7 - i)}Y</span>
+    <div className="aspect-[4/3] rounded-2xl bg-background border border-border/60 p-6 flex flex-col justify-center gap-2.5">
+      {[88, 70, 54, 38].map((w, i) => (
+        <div key={i} className="flex items-center gap-3 text-[12px] text-muted-foreground">
+          <div className="h-1.5 rounded-full bg-blue/80" style={{ width: `${w}%` }} />
+          <span>{7 - i}Y</span>
         </div>
       ))}
     </div>

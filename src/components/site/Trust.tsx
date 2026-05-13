@@ -1,13 +1,16 @@
 export function Trust() {
   return (
-    <section className="py-24 border-y border-border">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
-          Trusted by family offices, RIAs & sophisticated investors worldwide
-        </div>
-        <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center opacity-70">
+    <section className="py-16 border-t border-border/60">
+      <div className="container-x">
+        <p className="text-center text-[13px] text-muted-foreground">
+          Trusted by family offices, RIAs, and sophisticated investors worldwide
+        </p>
+        <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-8 gap-y-6 items-center">
           {["MERIDIAN", "ARCADIA", "NORTHSTAR", "OAKWOOD", "BLACKPINE", "VANGUARD·X"].map((b) => (
-            <div key={b} className="text-center font-display text-xl tracking-widest text-muted-foreground hover:text-foreground transition">
+            <div
+              key={b}
+              className="text-center text-[13px] tracking-[0.18em] font-medium text-muted-foreground/80"
+            >
               {b}
             </div>
           ))}
