@@ -9,14 +9,14 @@ export function PageShell({ eyebrow, title, lead, children }: {
   children: ReactNode;
 }) {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
       <Nav />
-      <main className="pt-32 pb-24">
-        <section className="mx-auto max-w-7xl px-6">
-          <div className="text-xs uppercase tracking-[0.2em] text-lemon">{eyebrow}</div>
-          <h1 className="mt-4 text-5xl sm:text-7xl leading-[1.05] max-w-4xl">{title}</h1>
-          {lead && <p className="mt-6 text-lg text-muted-foreground max-w-2xl leading-relaxed">{lead}</p>}
-          <div className="mt-16">{children}</div>
+      <main className="flex-1 pt-32 pb-24">
+        <section className="container-x">
+          <p className="text-[13px] text-blue tracking-wide">{eyebrow}</p>
+          <h1 className="mt-3 display-lg max-w-3xl">{title}</h1>
+          {lead && <p className="mt-5 text-[19px] text-muted-foreground max-w-2xl leading-snug">{lead}</p>}
+          <div className="mt-14">{children}</div>
         </section>
       </main>
       <Footer />
@@ -26,11 +26,11 @@ export function PageShell({ eyebrow, title, lead, children }: {
 
 export function FeatureGrid({ items }: { items: { t: string; d: string }[] }) {
   return (
-    <div className="grid md:grid-cols-3 gap-6">
+    <div className="grid md:grid-cols-3 gap-4">
       {items.map((it) => (
-        <div key={it.t} className="glass rounded-2xl p-7">
-          <div className="font-display text-2xl text-gradient-lemon">{it.t}</div>
-          <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{it.d}</p>
+        <div key={it.t} className="surface-tile p-7">
+          <div className="text-[20px] font-semibold tracking-tight">{it.t}</div>
+          <p className="mt-2 text-[15px] text-muted-foreground leading-relaxed">{it.d}</p>
         </div>
       ))}
     </div>
@@ -39,11 +39,11 @@ export function FeatureGrid({ items }: { items: { t: string; d: string }[] }) {
 
 export function Prose({ sections }: { sections: { h: string; p: string }[] }) {
   return (
-    <div className="glass rounded-3xl p-10 sm:p-14 space-y-10 max-w-4xl">
+    <div className="space-y-12 max-w-3xl">
       {sections.map((s) => (
         <div key={s.h}>
-          <h2 className="font-display text-3xl text-gradient-lemon">{s.h}</h2>
-          <p className="mt-4 text-muted-foreground leading-relaxed whitespace-pre-line">{s.p}</p>
+          <h2 className="text-[28px] font-semibold tracking-tight">{s.h}</h2>
+          <p className="mt-3 text-[16px] text-muted-foreground leading-relaxed whitespace-pre-line">{s.p}</p>
         </div>
       ))}
     </div>

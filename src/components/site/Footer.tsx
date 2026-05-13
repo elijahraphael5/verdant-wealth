@@ -23,36 +23,34 @@ const columns = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-border py-16">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="grid md:grid-cols-5 gap-10">
-          <div className="md:col-span-2">
-            <div className="flex items-center gap-2">
-              <div className="size-7 rounded-md bg-gradient-to-br from-[oklch(0.92_0.22_125)] to-[oklch(0.7_0.2_140)] grid place-items-center">
-                <svg viewBox="0 0 24 24" className="size-4 text-[oklch(0.18_0.05_155)]" fill="currentColor"><path d="M3 20 L12 4 L21 20 L12 14 Z"/></svg>
-              </div>
-              <span className="font-display text-xl">Solynvest<span className="text-lemon">.</span></span>
-            </div>
-            <p className="mt-4 text-sm text-muted-foreground max-w-sm">
-              Modern investment infrastructure for capital, FX, and fixed income. Built by operators, regulated globally.
+    <footer className="border-t border-border/60 py-14 text-[13px]">
+      <div className="container-x">
+        <div className="grid md:grid-cols-4 gap-10">
+          <div>
+            <Link to="/" className="flex items-center gap-1.5 font-display font-semibold text-[15px]">
+              <span className="inline-block size-[18px] rounded-[5px] bg-foreground" />
+              Solynvest
+            </Link>
+            <p className="mt-3 text-muted-foreground max-w-xs leading-relaxed">
+              Modern investment infrastructure. Built by operators, regulated globally.
             </p>
           </div>
           {columns.map((c) => (
             <div key={c.t}>
-              <div className="text-sm font-medium">{c.t}</div>
-              <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+              <div className="font-medium">{c.t}</div>
+              <ul className="mt-3 space-y-2 text-muted-foreground">
                 {c.l.map((i) => (
                   <li key={i.label}>
-                    <Link to={i.to} className="hover:text-foreground transition">{i.label}</Link>
+                    <Link to={i.to} className="hover:text-foreground transition-colors">{i.label}</Link>
                   </li>
                 ))}
               </ul>
             </div>
           ))}
         </div>
-        <div className="mt-12 pt-6 border-t border-border flex flex-col sm:flex-row gap-3 justify-between text-xs text-muted-foreground">
-          <div>© 2026 Solynvest, Inc. All rights reserved.</div>
-          <div>Investments involve risk including loss of principal. Past performance is not indicative of future results.</div>
+        <div className="mt-12 pt-6 border-t border-border/60 flex flex-col sm:flex-row gap-3 justify-between text-muted-foreground">
+          <div>© 2026 Solynvest, Inc.</div>
+          <div className="max-w-xl">Investments involve risk including loss of principal. Past performance is not indicative of future results.</div>
         </div>
       </div>
     </footer>
